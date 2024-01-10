@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Update Employee Details</title>
+</head>
+<body>
+<div>
+  <h2>Update Employee Details</h2>
+  <form action="/updateEmployee" method="POST">
+
+    <label>Employee first name: </label><input type="text" name="first_name" placeholder="First Name" th:value="${employee.first_name}"/>
+    <label>Employee last name: </label><input type="text" name="last_name" placeholder="Last Name" th:value="${employee.last_name}"/>
+    <label>Employee email: </label><input type="text" name="email" placeholder="Email" th:value="${employee.email}"/>
+    <input type="hidden" name="id" th:value="${employee.id}"/>
+    <input type="submit" name="submit" value="UPDATE"/>
+  </form>
+</div>
+</body>
+</html>
